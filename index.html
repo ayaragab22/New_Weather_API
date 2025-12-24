@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Start of Loader -->
+    <!-- <div id="loading">
+        <span class="loader"></span>
+    </div> -->
+    <!-- End of Loader -->
+
+    <!-- Start of Navbar -->
+    <div id="nav">
+        <div class="navContainer">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <span><i class="fa-solid fa-cloud-sun"></i></span>
+                        Weather</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item home">
+                                <a class="nav-link active homeItem" aria-current="page" href="#">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                    Home</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input id="countrySearch" class="searchBox form-control me-0" type="search"
+                                placeholder="Search for a City..." aria-label="Search" />
+                            <button id="searchBtn" class="btn btn-outline"
+                                type="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- End of Navbar -->
+
+    <!-- Start of Section content -->
+    <section class="pt-5">
+        <div class="sectionContainer pt-5">
+            <h1 id="cityName" class="text-center"></h1>
+            <!-- start of carsoul -->
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active items">
+                        <div id="card1" class="card text-center">
+                        </div>
+                    </div>
+                    <div class="carousel-item items">
+                        <div id="card2" class="card text-center">
+                        </div>
+                    </div>
+                    <div class="carousel-item items">
+                        <div id="card3" class="card text-center">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- end of carsoul -->
+            <template id="my-template">
+                <swal-title>You've subscribed successfully!</swal-title>
+            </template>
+            <form class="d-flex justify-content-center">
+                <input id="sub" class="subBox form-control" type="email" placeholder="Enter your email !"
+                    aria-label="Subscribe" />
+                <button data-swal-template="#my-template" id="subBtn" class="btn btn-outline" type="button">Subscribe</button>
+            </form>
+        </div>
+
+    </section>
+    <!-- End of Section content -->
+
+    <!-- Start of footer -->
+    <footer>
+        <div class="footerContent text-center">
+            <div class="icons">
+                <span><i class="fa-brands fa-facebook-f"></i></span>
+                <span><i class="fa-brands fa-twitter"></i></span>
+                <span><i class="fa-brands fa-google"></i></span>
+                <span><i class="fa-brands fa-github"></i></span>
+
+            </div>
+            <p>Copy Right 2018 © By Theme-fair All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- End of footer -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

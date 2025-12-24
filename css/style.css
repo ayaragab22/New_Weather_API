@@ -1,0 +1,248 @@
+*{
+    font-family: "Dancing Script", cursive;
+
+}
+
+:root{
+
+    --sky-shade: #dbf0f6;
+    --white-shade:white;
+    --blue-shade: #2FCDFE;
+    --sky-blue: #87CEFA;
+    --royal-blue: #003CFF;
+    --purple: rgb(133, 64, 142);
+    --light-purple: #DAD3FF;
+
+}
+
+/* Start of Navbar */
+#nav .btn{
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    color: white;
+    background-color:rgb(58, 9, 137) ;    
+}
+#nav .searchBox{
+    width: 480px;
+    height: 50px; 
+    margin-top: 10px;
+}
+/*#nav .btn-outline{
+    /* color: white; */
+    /* padding-top: 5px;
+    margin-top: 5px; */
+    /* border: white; */
+    /* border-color: white; */
+    /*text-shadow:2px 2px 5px var(--purple);/*
+
+}*/
+#nav .btn:hover{
+    background-color: var(--purple);
+    /* color: var(--royal-blue); */
+    
+}
+#nav a{
+    font-size: 30px;
+    color: white;
+    text-shadow:2px 2px 5px grey;
+}
+#nav span i{
+    font-size: 40px;
+    /* margin-right: 5px; */
+    color: white;
+}
+#nav i{
+    font-size: 30px;
+    /* margin-right: 2px; */
+}
+#nav .homeItem{
+    /* color:  var(--purple); */
+    color: white;
+
+}
+#nav li{
+    margin-right: 15px;
+}
+/* End of Navbar */
+
+/* Start of Section content */
+body{
+    background: linear-gradient(rgba(152, 195, 231, 0.459)), url(../abstract-earth-planet-sea.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.content{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+h1{
+    font-size: 100px;
+    margin: auto;
+    color: var(--purple);
+    font-weight: 900;
+    margin-bottom: 40px;
+    /* margin-top: 20px; */
+    text-shadow: 10px 10px 10px var(--light-purple);
+}
+.card img{
+    height: 100px;
+    width: 100px;
+}
+
+#carouselExample {
+    width: 500px;  
+    margin: 0 auto;    
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.carousel-item .card {
+    width: 100%;       /* card fills the carousel */
+    color: var(--purple);
+    position: relative;
+    border-radius: 10px;
+    
+}
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.carousel::after, .carousel::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), var(--purple),rgb(169, 169, 47),#006aff, #ff0095, var(--sky-blue));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 10px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.carousel::before{
+  filter: blur(1.5rem);
+  opacity: 0.9;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+    
+}
+.card-header{
+    color: var(--purple);
+}
+.card-body{
+    color: var(--purple);
+}
+.card-footer{
+    height: 80px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--purple);
+}
+.card-footer h3{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card-footer i{
+    margin-left: 15px;
+}
+
+#sub{ 
+    width: 500px;
+    margin-top: 100px;
+}
+#subBtn{
+    color: white;
+    background-color:rgb(58, 9, 137) ;
+    margin-top: 100px;
+}
+#subBtn:hover{
+    background-color: var(--purple);
+    /* color: var(--royal-blue); */
+    
+}
+
+/* End of Section content */
+
+/* Start of Footer */
+.footerContent{
+    background-color: var(--deep-burgundy);
+    height: 100px;
+    color: rgb(58, 9, 137);
+    margin-top: 50px;
+}
+.footerContent span{
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.footerContent span:hover{
+    color: var(--purple);
+    cursor: pointer;
+}
+
+/* End of Footer */
+
+/* Start of Loader */
+/*#loading{
+    background-color: var(--light-purple);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .loader {
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: currentColor;
+  color: #FFF;
+  box-sizing: border-box;
+  animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+
+.loader::after, .loader::before {
+  content: '';
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  box-sizing: border-box;
+  animation: animloader 0.3s  0.45s  linear infinite alternate;
+}
+.loader::before {
+  left: -20px;
+  animation-delay: 0s;
+}
+
+@keyframes animloader {
+  0%   { height: 48px} 
+  100% { height: 4px}
+}*/
+ /* End of Loader */
